@@ -6,6 +6,30 @@ function menu() {
 		menu.style.right = "-378px";
 	} else {
 		menu.style.right = "-58px";
+	} 
+}
+
+// scroll to section function
+
+window.onscroll = function() {scrollFunction()};
+
+
+// slide up navigation function
+
+function scrollFunction() {
+	var nav_wrapper = document.getElementById("nav_wrapper");
+	var menu_wrapper = document.getElementsByClassName("menuLogo_wrapper");
+	if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+		nav_wrapper.style.top = "-45px";
+	} else {
+		nav_wrapper.style.top = "0";
+	}
+	if (window.innerWidth <= 600) {
+		menu_wrapper[0].style.padding = "50px 10.7% 3px";
+	}
+	if (window.innerWidth <= 420) {
+		nav_wrapper.style.top = "0";
+		menu_wrapper[0].style.padding = "7px 10.7% 3px";
 	}
 }
 
